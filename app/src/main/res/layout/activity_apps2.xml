@@ -25,22 +25,22 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Facebook"/>
+                android:text="ข้อความ"/>
             <Button
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Line"/>
+                android:text="ปฏิทิน"/>
             <Button
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Youtube"/>
+                android:text="google map"/>
             <Button
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Camera"/>
+                android:text="Gallery"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -52,22 +52,22 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="การตั้งค่า"/>
+                android:text="Note"/>
             <Button
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Grab"/>
+                android:text="นาฬิกา"/>
             <Button
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Music"/>
+                android:text="วีดีโอ"/>
             <Button
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="dial"/>
+                android:text="บัญชีติดต่อ"/>
         </LinearLayout>
 
 
@@ -81,17 +81,23 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="chrome"/>
+                android:text="skype"/>
             <Button
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="audio book"/>
+                android:text="tool folder"/>
             <Button
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="app store"/>
+                android:text="top app"/>
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Google"/>
+
 
         </LinearLayout>
         <LinearLayout
@@ -106,13 +112,6 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:orientation="vertical">
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
         android:orientation="horizontal">
         <Button
             android:layout_width="match_parent"
@@ -123,6 +122,7 @@
             android:layout_gravity="bottom"
             android:text="แอปอื่นๆ"/>
     </LinearLayout>
+
 
 
 </LinearLayout>

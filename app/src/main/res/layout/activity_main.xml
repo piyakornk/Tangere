@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:gravity="center"
-    android:padding="30dp"
+    android:padding="10dp"
     android:orientation="vertical">
 
     <LinearLayout
@@ -18,30 +18,22 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:layout_marginHorizontal="20dp"
-            android:text="(blink sound)"
-            android:textSize="20dp"/>
+            android:text=" เชื่อมบลูทูธ
+9 นาฬิกา 48 นาที
+หนึ่งแจ้งเตือน"
+            android:textSize="30dp"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:layout_marginHorizontal="20dp"
-            android:text="09:48"
-            android:textSize="50dp"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_marginHorizontal="20dp"
-            android:text="(1 notification)"
-            android:textSize="20dp"/>
+            android:text="พ่อ
+facebook 3 ชั่วโมงที่แล้ว
+รักและคิดถึง"
+            android:textSize="25dp"/>
 
     </LinearLayout>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -50,12 +42,27 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Like"/>
+            android:text="Like"
+            android:textSize="25dp"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Reply"/>
+            android:text="ตอบกลับ"
+            android:textSize="25dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ไม่มีการแจ้งเตือนอื่น
+เข้าสู่หน้าหลัก"
+            android:textSize="30dp"/>
 
     </LinearLayout>
 
