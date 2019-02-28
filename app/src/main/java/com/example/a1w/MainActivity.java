@@ -8,6 +8,7 @@ import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewManager;
 import android.widget.Button;
@@ -155,5 +156,21 @@ public class MainActivity extends AppCompatActivity {
         } catch (PackageManager.NameNotFoundException ignored) {
         }
         return new Intent(Intent.ACTION_VIEW, uri);
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        System.out.println(keyCode);
+        switch (keyCode) {
+            case KeyEvent.KEYCODE_VOLUME_DOWN:
+                // Don't allow this value to go to 0. It shuts the screen off.
+                System.out.print("volume down pressed!");
+                return true;
+            case KeyEvent.KEYCODE_VOLUME_UP:
+                System.out.print("volume up pressed!");
+                return true;
+            default:
+                return super.onKeyDown(keyCode, event);
+        }
     }
 }
