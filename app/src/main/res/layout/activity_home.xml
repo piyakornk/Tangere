@@ -25,22 +25,26 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Facebook"/>
+                android:text="Facebook"
+                android:id="@+id/facebook"/>
             <Button
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Line"/>
+                android:text="Line"
+                android:id="@+id/line"/>
             <Button
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Youtube"/>
+                android:text="Youtube"
+                android:id="@+id/youtube"/>
             <Button
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Camera"/>
+                android:text="Camera"
+                android:id="@+id/camera"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -52,22 +56,26 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="การตั้งค่า"/>
+                android:text="การตั้งค่า"
+                android:id="@+id/setting"/>
             <Button
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Grab"/>
+                android:text="Grab"
+                android:id="@+id/grab"/>
             <Button
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Music"/>
+                android:text="Music"
+                android:id="@+id/music"/>
             <Button
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="dial"/>
+                android:text="dial"
+                android:id="@+id/dial"/>
         </LinearLayout>
 
 
@@ -81,17 +89,20 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="chrome"/>
+                android:text="chrome"
+                android:id="@+id/chrome"/>
             <Button
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="audio book"/>
+                android:text="audio book"
+                android:id="@+id/abook"/>
             <Button
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="app store"/>
+                android:text="app store"
+                android:id="@+id/astore"/>
 
         </LinearLayout>
         <LinearLayout
@@ -121,7 +132,8 @@
             android:layout_alignParentRight="true"
             android:gravity="center"
             android:layout_gravity="bottom"
-            android:text="แอปอื่นๆ"/>
+            android:text="แอปอื่นๆ"
+            android:id="@+id/moreApps"/>
     </LinearLayout>
 
 
