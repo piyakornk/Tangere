@@ -14,6 +14,7 @@ import android.view.ViewManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -160,17 +161,14 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        System.out.println(keyCode);
-        switch (keyCode) {
-            case KeyEvent.KEYCODE_VOLUME_DOWN:
-                // Don't allow this value to go to 0. It shuts the screen off.
-                System.out.print("volume down pressed!");
-                return true;
-            case KeyEvent.KEYCODE_VOLUME_UP:
-                System.out.print("volume up pressed!");
-                return true;
-            default:
-                return super.onKeyDown(keyCode, event);
+        System.out.println("button pressed, keycode = "+keyCode);
+        Toast.makeText(MainActivity.this, "keycode = "+keyCode, Toast.LENGTH_SHORT);
+        if (keyCode == 24 || keyCode == 99 || keyCode == 67) {
+            Intent intent = new Intent(MainActivity.this, MainActivity.class);
+            MainActivity.this.startActivity(intent);
+            return true;
+        } else {
+            return super.onKeyDown(keyCode, event);
         }
     }
 }
