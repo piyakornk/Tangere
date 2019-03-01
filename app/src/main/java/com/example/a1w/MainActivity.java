@@ -160,42 +160,26 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    //X to home
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         System.out.println("button pressed, keycode = "+keyCode);
         Toast.makeText(MainActivity.this, "keycode = "+keyCode, Toast.LENGTH_SHORT);
+        //X to home
         if (keyCode == 24 || keyCode == 99 || keyCode == 67) {
             Intent intent = new Intent(MainActivity.this, HomeActivity.class);
             MainActivity.this.startActivity(intent);
             return true;
-        } else {
-            return super.onKeyDown(keyCode, event);
-        }
-    }
-    @Override
-    //A to next page
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        System.out.println("button pressed, keycode = "+keyCode);
-        Toast.makeText(MainActivity.this, "keycode = "+keyCode, Toast.LENGTH_SHORT);
-        if (keyCode == 25 || keyCode == 96 || keyCode == 67) {
+        //A to next page
+        } else if (keyCode == 25 || keyCode == 96 || keyCode == 67) {
             Intent intent = new Intent(MainActivity.this, HomeActivity.class);
             MainActivity.this.startActivity(intent);
             return true;
-        } else {
-            return super.onKeyDown(keyCode, event);
+        // select to dial
+        } else if (keyCode == 303 || keyCode == 109 ) {
+            Intent intent = new Intent(Intent.ACTION_DIAL)
+            startActivity(intent);
+            return true;
         }
+        return super.onKeyDown(keyCode, event);
+
     }
 
-    @Override
-    //push to dial
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        System.out.println("button pressed, keycode = "+keyCode);
-        Toast.makeText(MainActivity.this, "keycode = "+keyCode, Toast.LENGTH_SHORT);
-        if (keyCode == 303 || keyCode == 109 ) {
-            android:autoLink = "phone";
-            return true;
-        } else {
-            return super.onKeyDown(keyCode, event);
-        }
-    }
-}

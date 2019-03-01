@@ -16,16 +16,21 @@ public class HomeActivity extends AppCompatActivity {
 
     }
     @Override
-    //A to next page
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         System.out.println("button pressed, keycode = " + keyCode);
         Toast.makeText(HomeActivity.this, "keycode = " + keyCode, Toast.LENGTH_SHORT);
+        //A to next page
         if (keyCode == 25 || keyCode == 96 || keyCode == 67) {
             Intent intent = new Intent(HomeActivity.this, AppsActivity.class);
             HomeActivity.this.startActivity(intent);
             return true;
-        } else {
-            return super.onKeyDown(keyCode, event);
+            // select to dial
+        } else if (keyCode == 303 || keyCode == 109 ) {
+            Intent intent = new Intent(Intent.ACTION_DIAL)
+            startActivity(intent);
+            return true;
         }
-     }
+        return super.onKeyDown(keyCode, event);
+
+    }
 }
