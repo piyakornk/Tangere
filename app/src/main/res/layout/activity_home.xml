@@ -10,6 +10,19 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="0.2">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="หน้าหลัก"
+            android:layout_gravity="center"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:layout_weight="4"
         android:weightSum="4"
         android:orientation="vertical">
@@ -74,7 +87,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="dial"
+                android:text="chrome"
                 android:id="@+id/dial"/>
         </LinearLayout>
 
@@ -85,24 +98,8 @@
             android:orientation="horizontal"
             android:weightSum="4"
             android:layout_weight="1">
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="chrome"
-                android:id="@+id/chrome"/>
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="audio book"
-                android:id="@+id/abook"/>
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="app store"
-                android:id="@+id/astore"/>
+
+
 
         </LinearLayout>
         <LinearLayout
@@ -113,10 +110,10 @@
 
 
     </LinearLayout>
-    <LinearLayout
+   <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="0.8"
         android:orientation="vertical">
     </LinearLayout>
 

@@ -105,14 +105,14 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
-        clockThread.start();
+        // clockThread.start();
 
         noti_count.setText("" + notification.getChildCount() + " notification(s)");
 
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, AppsActivity.class);
+                Intent intent = new Intent(MainActivity.this, HomeActivity.class);
                 MainActivity.this.startActivity(intent);
             }
         });
@@ -120,28 +120,28 @@ public class MainActivity extends AppCompatActivity {
         close_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((ViewManager)noti1.getParent()).removeView(noti1);
+                ((ViewManager) noti1.getParent()).removeView(noti1);
             }
         });
 
         close_2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((ViewManager)noti2.getParent()).removeView(noti2);
+                ((ViewManager) noti2.getParent()).removeView(noti2);
             }
         });
 
         close_3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((ViewManager)noti3.getParent()).removeView(noti3);
+                ((ViewManager) noti3.getParent()).removeView(noti3);
             }
         });
 
         close_4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((ViewManager)noti4.getParent()).removeView(noti4);
+                ((ViewManager) noti4.getParent()).removeView(noti4);
             }
         });
     }
@@ -161,25 +161,24 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        System.out.println("button pressed, keycode = "+keyCode);
-        Toast.makeText(MainActivity.this, "keycode = "+keyCode, Toast.LENGTH_SHORT);
+        System.out.println("button pressed, keycode = " + keyCode);
         //X to home
         if (keyCode == 24 || keyCode == 99 || keyCode == 67) {
             Intent intent = new Intent(MainActivity.this, HomeActivity.class);
             MainActivity.this.startActivity(intent);
             return true;
-        //A to next page
-        } else if (keyCode == 25 || keyCode == 96 || keyCode == 67) {
+            //A to next page
+        } else if (keyCode == 25 || keyCode == 96) {
             Intent intent = new Intent(MainActivity.this, HomeActivity.class);
             MainActivity.this.startActivity(intent);
             return true;
-        // select to dial
-        } else if (keyCode == 303 || keyCode == 109 ) {
-            Intent intent = new Intent(Intent.ACTION_DIAL)
+            // select to dial
+        } else if (keyCode == 303 || keyCode == 109) {
+            Intent intent = new Intent(Intent.ACTION_DIAL);
             startActivity(intent);
             return true;
         }
         return super.onKeyDown(keyCode, event);
 
     }
-
+}

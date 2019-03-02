@@ -15,7 +15,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="หน้าแรก"
+            android:text="หน้าที่สอง"
             android:layout_gravity="center"
             />
 
@@ -39,22 +39,22 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="ข้อความ"/>
+                android:text="Netflix"/>
             <Button
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="ปฏิทิน"/>
+                android:text="JOOX"/>
             <Button
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="รูปภาพ"/>
+                android:text="line"/>
             <Button
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="กล้อง"/>
+                android:text="facebook"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -66,22 +66,22 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="อีเมลล์"/>
+                android:text="grab"/>
             <Button
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="นาฬิกา"/>
+                android:text="Pannana"/>
             <Button
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="แผนที่"/>
+                android:text="Messenger"/>
             <Button
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="พยากรณ์อากาศ"/>
+                android:text="youtube"/>
         </LinearLayout>
 
 
@@ -95,22 +95,22 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="บันทึก"/>
+                android:text="เครื่องคิดเลข"/>
             <Button
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="เตือนความจำ"/>
+                android:text="audio book"/>
             <Button
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="ตั้งค่า"/>
+                android:text="Be My Eyes"/>
             <Button
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="แอปสโตร์"/>
+                android:text="Beacon"/>
 
 
         </LinearLayout>
@@ -142,7 +142,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="โทรออก"/>
+            android:text="โทร"/>
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
