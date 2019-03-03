@@ -1,5 +1,6 @@
 package com.example.a1w;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
@@ -11,6 +12,8 @@ import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewManager;
+import android.view.accessibility.AccessibilityEvent;
+import android.view.accessibility.AccessibilityManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -45,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Thread clockThread;
 
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -108,6 +112,20 @@ public class MainActivity extends AppCompatActivity {
         clockThread.start();
 
         noti_count.setText("" + notification.getChildCount() + " notification(s)");
+
+
+        AccessibilityManager manager = (AccessibilityManager)getApplicationContext().getSystemService(Context.ACCESSIBILITY_SERVICE);
+
+        if (manager.isEnabled()) {
+
+            AccessibilityEvent e = AccessibilityEvent.obtain();
+            e.setEventType(AccessibilityEvent.TYPE_ANNOUNCEMENT);
+            e.getText().add("หน้าแจ้งเตือน");
+
+            //There may be other things you need to add like class/packagename, I'm doing this from memory on my non-dev machine, so if this isn't quite right I apologize, I promise it's super close! :)
+
+            manager.sendAccessibilityEvent(e);
+        }
 
         next.setOnClickListener(new View.OnClickListener() {
             @Override
