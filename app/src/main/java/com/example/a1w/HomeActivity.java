@@ -1,5 +1,6 @@
 package com.example.a1w;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
@@ -8,6 +9,7 @@ import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewManager;
+import android.view.accessibility.AccessibilityEvent;
 import android.view.accessibility.AccessibilityManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -40,6 +42,18 @@ public class HomeActivity extends AppCompatActivity {
                 HomeActivity.this.startActivity(intent);
             }
         });
+
+        AccessibilityManager manager = (AccessibilityManager)getApplicationContext().getSystemService(Context.ACCESSIBILITY_SERVICE);
+        if (manager.isEnabled()) {
+
+            AccessibilityEvent e = AccessibilityEvent.obtain();
+            e.setEventType(AccessibilityEvent.TYPE_ANNOUNCEMENT);
+            e.getText().add("home");
+
+            //There may be other things you need to add like class/packagename, I'm doing this from memory on my non-dev machine, so if this isn't quite right I apologize, I promise it's super close! :)
+
+            manager.sendAccessibilityEvent(e);
+        }
 
         /*first.setFocusable(true);
         first.setFocusableInTouchMode(true);

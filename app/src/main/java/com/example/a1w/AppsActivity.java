@@ -1,9 +1,12 @@
 package com.example.a1w;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.KeyEvent;
+import android.view.accessibility.AccessibilityEvent;
+import android.view.accessibility.AccessibilityManager;
 import android.widget.Toast;
 
 public class AppsActivity extends AppCompatActivity {
@@ -12,6 +15,18 @@ public class AppsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_apps2);
+
+        AccessibilityManager manager = (AccessibilityManager)getApplicationContext().getSystemService(Context.ACCESSIBILITY_SERVICE);
+        if (manager.isEnabled()) {
+
+            AccessibilityEvent e = AccessibilityEvent.obtain();
+            e.setEventType(AccessibilityEvent.TYPE_ANNOUNCEMENT);
+            e.getText().add("home, next page");
+
+            //There may be other things you need to add like class/packagename, I'm doing this from memory on my non-dev machine, so if this isn't quite right I apologize, I promise it's super close! :)
+
+            manager.sendAccessibilityEvent(e);
+        }
     }
 
     @Override
