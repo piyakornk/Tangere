@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
-        // clockThread.start();
+        clockThread.start();
 
         noti_count.setText("" + notification.getChildCount() + " notification(s)");
 

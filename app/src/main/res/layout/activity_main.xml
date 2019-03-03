@@ -11,14 +11,16 @@
         android:layout_height="wrap_content"
         android:layout_weight="0.5"
         android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:focusable="true">
 
-        <TextView
+
+        <!--<TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="เชื่อมต่อบลูทูธ"
-            android:textSize="15dp" />
+            android:textSize="15dp" />-->
 
         <TextView
             android:id="@+id/clock"
@@ -83,8 +85,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="20dp"
-                        android:text="พ่อ\nfacebook 3 ชั่วโมงที่แล้ว\nรักและคิดถึง"
-                        android:textSize="25dp" />
+                        android:text="พ่อ\nไลน์ ตอนนี้\nรักและคิดถึง"
+                        android:textSize="25dp"
+                        android:focusable="true"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -97,7 +100,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginHorizontal="5dp"
-                            android:text="Like"
+                            android:text="ส่งสติกเกอร์"
                             android:textSize="15dp" />
 
                         <Button
@@ -112,7 +115,7 @@
                             android:layout_width="30dp"
                             android:layout_height="30dp"
                             android:id="@+id/close_noti1"
-                            android:text="x"
+                            android:text="ปิด"
                             android:padding="0dp"/>
                     </LinearLayout>
                 </LinearLayout>
@@ -130,8 +133,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="20dp"
-                    android:text="tan\nfacebook 2 hrs\n大红袍很好和!"
-                    android:textSize="25dp" />
+                    android:text="แทน\nmessenger 15 นาทีที่แล้ว\nชาดาฮงเปาอร่อยมาก! "
+                    android:textSize="25dp"
+                    android:focusable="true"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -159,7 +163,7 @@
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:id="@+id/close_noti2"
-                        android:text="x"
+                        android:text="ปิด"
                         android:padding="0dp"/>
                 </LinearLayout>
             </LinearLayout>
@@ -176,8 +180,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="20dp"
-                    android:text="tan\nfacebook now\nmore test messages!"
-                    android:textSize="25dp" />
+                    android:text="facebook\nจูนกดไลค์รูปของคุณ 18นาทีที่แล้ว"
+                    android:textSize="25dp"
+                    android:focusable="true"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -190,7 +195,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
-                        android:text="Like"
+                        android:text="เข้าดู"
                         android:textSize="15dp" />
 
                     <Button
@@ -205,7 +210,7 @@
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:id="@+id/close_noti3"
-                        android:text="x"
+                        android:text="ปิด"
                         android:padding="0dp"/>
                 </LinearLayout>
             </LinearLayout>
@@ -221,8 +226,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="20dp"
-                    android:text="franc\nfacebook now\nmore test messages!"
-                    android:textSize="25dp" />
+                    android:text="ฟรังก์ \nmessenger 3ชั่วโมงที่แล้ว \nพรุ่งนี้ไปหอศิลป์กันไหม"
+                    android:textSize="25dp"
+                    android:focusable="true"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -250,9 +256,16 @@
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:id="@+id/close_noti4"
-                        android:text="x"
+                        android:text="ปิด"
                         android:padding="0dp"/>
                 </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/end_noti"
+                    android:text="ไม่มีการแจ้งเตือนอื่น"
+                    android:gravity="center"
+                    android:focusable="true"/>
             </LinearLayout>
 
         </LinearLayout>
@@ -268,12 +281,7 @@
         android:gravity="center"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/end_noti"
-            android:text="ไม่มีการแจ้งเตือนอื่น"
-            android:gravity="center"/>
+
 
         <Button
             android:id="@+id/home_main"
